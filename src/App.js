@@ -10,6 +10,11 @@ import SearchHeader from './components/SearchHeader/SearchHeader';
 
 const PageContainer = styled.div`
   flex-grow: 1;
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+  background-color:#EEEEEE;
 `;
 
 function App() {

@@ -48,6 +48,7 @@ const LogoImage = styled.img`
   width:60px;
   height:40px;
   align-self:center;
+  cursor:pointer;
   margin-right:1rem;
 `;
 
@@ -56,7 +57,7 @@ const SearchHeader = () => {
   const onSearchItems = useCallback(() => history.push(`/items?search=${Search}`), [Search]);
   return (
       <SearchBoxContainer>
-        <LogoImage src={logoMl} width='60px' height='40px'/>
+        <LogoImage src={logoMl} width='60px' height='40px' onClick={() => history.push(`/items?search=${Search}`)}/>
         <SearchContainer>
           <SearchInput 
             placeholder='Nunca pares de buscar'

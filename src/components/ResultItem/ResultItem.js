@@ -4,7 +4,7 @@ import freeShippingIcon from '../../assets/ic_shipping.png';
 import history from '../../services/history';
 
 const ResultContainer = styled.div`
-  width:70%;
+  width:100%;
   align-self:center;
   border-radius:4px;
   border-bottom: 1px solid #EEEEEE;
@@ -12,6 +12,7 @@ const ResultContainer = styled.div`
   display:flex;
   flex-direction:row;
   justify-content:flex-start;
+  cursor: pointer;
 `;
 const ResultImageContainer = styled.div`
   border-radius: 4px;
@@ -22,15 +23,7 @@ const ResultBody = styled.div`
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-`;
-const ResultPrice = styled.div`
-  align-self:flex-start;
-  font-size:24px;
-  margin: 1rem 0rem;
-`;
-const ResultTitle = styled.div`
-  align-self:flex-start;
-  font-size:18px;
+  width:100%;
 `;
 const ResultFirstColumn = styled.div`
   display:flex;
@@ -41,10 +34,24 @@ const ResultFirstColumn = styled.div`
 const ResultSecondColumn = styled.div`
   margin-top: 3rem;
   padding:1rem;
+  font-family: Arial, Helvetica, sans-serif;
   display:flex;
   flex-direction:row;
   justify-content:flex-end;
+  text-align:end;
 `;
+const ResultPrice = styled.div`
+  align-self:flex-start;
+  font-size:24px;
+  margin: 1rem 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+`;
+const ResultTitle = styled.div`
+  align-self:flex-start;
+  font-size:18px;
+    font-family: Arial, Helvetica, sans-serif;
+`;
+
 const ResultItem = ({id, thumbnail, currency, price, freeShipping, title, stateName}) =>  {
   return (
     <ResultContainer onClick={() => history.push(`/items/${id}`)}>
