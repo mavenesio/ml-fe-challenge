@@ -8,10 +8,10 @@ const ResultList = ({data}) => {
           <ResultItem
             key={result.id}
             id={result.id}
-            thumbnail={result.thumbnail}
-            currency={result.currency}
-            price={result.price}
-            freeShipping={result.freeShipping}
+            thumbnail={result.picture}
+            currency={result.price.currency}
+            price={result.price.amount}
+            freeShipping={result.free_shipping}
             title={result.title}
             stateName={result.stateName}
           />
@@ -22,9 +22,7 @@ const ResultList = ({data}) => {
 
   return (
       <>
-        {
-          data && renderResults(data)
-        }
+        { data && renderResults(data) }
       </>
   );
 }
