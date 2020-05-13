@@ -86,7 +86,7 @@ const ItemDetails = ({details}) => {
     return (
         <div>
             {
-                details && 
+                details ?
                 <ItemDetailsContainer>
                     <ItemBox>
                         <ItemImageContainer>
@@ -106,6 +106,7 @@ const ItemDetails = ({details}) => {
                         <DescriptionText>{details.description}</DescriptionText>
                     </ItemDetailsDescription>
                 </ItemDetailsContainer>
+                : <h1>Pagina no encontrada</h1>
             }
         </div>
     )
