@@ -32,7 +32,7 @@ const ResultList = ({data}) => {
   return (
       <ResultListContainer>
         { 
-        (data && data.lenght > 0) 
+        (data && data.length > 0) 
         ? renderResults(data)
         : <NoResults>No hay resultados</NoResults> 
         }
