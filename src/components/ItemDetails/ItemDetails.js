@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Gallery from '../Gallery/Gallery';
 
 const ItemDetailsContainer = styled.div`
     display:flex;
@@ -23,6 +24,8 @@ const ItemDetailsDescription = styled.div`
 `;
 
 const ItemImageContainer = styled.div`
+    width:1000px;
+    height:500px;
 `;
 const ItemDetailsColumn = styled.div`
     display:flex;
@@ -82,16 +85,15 @@ const ItemDetails = ({details}) => {
 
     return (
         <div>
-        {console.log(details)}
             {
                 details && 
                 <ItemDetailsContainer>
                     <ItemBox>
                         <ItemImageContainer>
-                            <img src={details.picture} alt='' width='600px' height='680px' />
+                            <Gallery pictures={details.pictures}/>
                         </ItemImageContainer>
                         <ItemDetailsColumn>
-                            <ItemSubTitle>Nuevo - 234 vendidos</ItemSubTitle>
+                            <ItemSubTitle>{details.condition} - {`${details.sold_quantity} vendido${details.sold_quantity > 1 ? 's' : ''}`}</ItemSubTitle>
                             <ItemTitle>{details.title}</ItemTitle>
                             <ItemPrice>
                             {`${details.price.currency} ${details.price.amount.toFixed().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".")} `}    
