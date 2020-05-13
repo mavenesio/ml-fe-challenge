@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetails should render with props 1`] = `
+<ItemDetails
+  details={
+    Object {
+      "condition": "new",
+      "description": "Mayor rendimiento↵Su memoria RAM de 3 GB te permitirá ej..",
+      "free_shipping": false,
+      "id": "MLA846526085",
+      "picture": "http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg",
+      "price": Object {
+        "amount": 139989.99,
+        "currency": "$",
+        "decimals": 0,
+      },
+      "sold_quaranty": 1,
+      "title": "Apple iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram",
+    }
+  }
+/>
+`;
+
+exports[`ItemDetails should render without props 1`] = `<ItemDetails />`;

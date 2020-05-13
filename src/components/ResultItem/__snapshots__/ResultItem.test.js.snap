@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultItem should render with props 1`] = `
+<ResultItem
+  currency="$"
+  freeShipping={true}
+  id="MLA846526085"
+  price={139989.99}
+  stateName="Capital Federal"
+  thumbnail="http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg"
+  title="Apple iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram"
+/>
+`;
+
+exports[`ResultItem should render without props 1`] = `<ResultItem />`;

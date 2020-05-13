@@ -1,9 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Title should render the Breadcrumb Component correctly 1`] = `<styled.div />`;
+exports[`Breadcrumb should render with props 1`] = `
+<Breadcrumb
+  categories={
+    Array [
+      "cat 1",
+      "cat 2",
+    ]
+  }
+/>
+`;
 
-exports[`Title should render with props 1`] = `<Breadcrumb />`;
+exports[`Breadcrumb should render without props 1`] = `<Breadcrumb />`;
 
-exports[`Title should render without parameters 1`] = `<Breadcrumb />`;
+exports[`Title should render with props 1`] = `
+<Breadcrumb
+  categories={
+    Array [
+      "cat 1",
+      "cat 2",
+    ]
+  }
+/>
+`;
 
 exports[`Title should render without props 1`] = `<Breadcrumb />`;

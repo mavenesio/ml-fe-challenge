@@ -82,6 +82,7 @@ const ItemDetails = ({details}) => {
 
     return (
         <div>
+        {console.log(details)}
             {
                 details && 
                 <ItemDetailsContainer>

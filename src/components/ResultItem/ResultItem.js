@@ -54,6 +54,7 @@ const ResultTitle = styled.div`
 const ResultItem = ({id, thumbnail, currency, price, freeShipping, title, stateName}) =>  {
   return (
     <ResultContainer onClick={() => history.push(`/items/${id}`)}>
+    {console.log(id, thumbnail, currency, price, freeShipping, title, stateName)}
       <ResultImageContainer>
         <img src={thumbnail} width='180px' height='180px' alt=''/>
       </ResultImageContainer>

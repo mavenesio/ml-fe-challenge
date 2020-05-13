@@ -1,7 +1,7 @@
 import React from 'react';
 import Breadcrumb from './Breadcrumb';
 
-describe('Title', () => {
+describe('Breadcrumb', () => {
   it('should render without props', () => {   
     expect(<Breadcrumb />).toMatchSnapshot();
   });
