@@ -6,6 +6,9 @@ const ResultListContainer = styled.div`
   border-radius:8px;
   background-color:white;
 `;
+const NoResults = styled.h1`
+  padding:1rem;
+`;
 
 const ResultList = ({data}) => {
   const renderResults = useCallback( (results) => {
@@ -28,7 +31,11 @@ const ResultList = ({data}) => {
 
   return (
       <ResultListContainer>
-        { data && renderResults(data) }
+        { 
+        (data && data.lenght > 0) 
+        ? renderResults(data)
+        : <NoResults>No hay resultados</NoResults> 
+        }
       </ResultListContainer>
   );
 }
