@@ -1,5 +1,11 @@
 import React, {useCallback} from 'react';
+import styled from 'styled-components';
 import ResultItem from '../ResultItem/ResultItem';
+
+const ResultListContainer = styled.div`
+  border-radius:8px;
+  background-color:white;
+`;
 
 const ResultList = ({data}) => {
   const renderResults = useCallback( (results) => {
@@ -21,9 +27,9 @@ const ResultList = ({data}) => {
   }, []);
 
   return (
-      <>
+      <ResultListContainer>
         { data && renderResults(data) }
-      </>
+      </ResultListContainer>
   );
 }
 

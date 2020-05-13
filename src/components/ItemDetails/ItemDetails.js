@@ -6,17 +6,20 @@ const ItemDetailsContainer = styled.div`
     flex-direction:column;
     justify-content:center;
     background-color:white;
+    border-radius:4px;
 `;
 const ItemBox = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
+    margin-top:16px;
 `;
 const ItemDetailsDescription = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     padding-top: 4rem;
+    margin-bottom:16px;
 `;
 
 const ItemImageContainer = styled.div`
@@ -54,6 +57,7 @@ const DescriptionTitle = styled.div`
 `;
 const DescriptionText = styled.div`
     margin-bottom: 32px;
+    padding: 16px;
     font-size:16px;
     font-family: Arial, Helvetica, sans-serif;
 `;

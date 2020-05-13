@@ -9,7 +9,7 @@ const PageContainer = Styled.div`
   flex-direction:column;
   justify-content:flex-start;
   width:100%;
-  height:100%;
+  height:90vh;
   background-color:#EEEEEE;
 `;
 const SearchResultsContainer= Styled.div`

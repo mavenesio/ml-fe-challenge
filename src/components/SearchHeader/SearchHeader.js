@@ -57,7 +57,7 @@ const SearchHeader = () => {
   const onSearchItems = useCallback(() => history.push(`/items?search=${Search}`), [Search]);
   return (
       <SearchBoxContainer>
-        <LogoImage src={logoMl} width='60px' height='40px' onClick={() => history.push(`/items?search=${Search}`)}/>
+        <LogoImage src={logoMl} width='60px' height='40px' onClick={() => {history.push(`/`); setSearch('')}}/>
         <SearchContainer>
           <SearchInput 
             placeholder='Nunca pares de buscar'

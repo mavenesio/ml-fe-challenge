@@ -8,7 +8,6 @@ const ResultContainer = styled.div`
   align-self:center;
   border-radius:4px;
   border-bottom: 1px solid #EEEEEE;
-  background-color:white;
   display:flex;
   flex-direction:row;
   justify-content:flex-start;
