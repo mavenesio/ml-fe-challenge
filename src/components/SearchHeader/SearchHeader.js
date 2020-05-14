@@ -12,7 +12,7 @@ const SearchBoxContainer = styled.div`
   height:60px;
   background-color:#FFE600;
 `;
-const SearchContainer = styled.div`
+const SearchContainer = styled.label`
   position:relative;
   display:flex;
   height:100%;
@@ -51,21 +51,35 @@ const LogoImage = styled.img`
   cursor:pointer;
   margin-right:1rem;
 `;
+const HiddenLabel = styled.span`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+`;
 
 const SearchHeader = () => {
   const [Search, setSearch] = useState('');
   const onSearchItems = useCallback(() => history.push(`/items?search=${Search}`), [Search]);
   return (
       <SearchBoxContainer>
-        <LogoImage src={logoMl} width='60px' height='40px' onClick={() => {history.push(`/`); setSearch('')}}/>
+        <LogoImage src={logoMl} width='60px' height='40px' alt='' onClick={() => {history.push(`/`); setSearch('')}}/>
         <SearchContainer>
+          <HiddenLabel>Buscar</HiddenLabel>
           <SearchInput 
             placeholder='Nunca pares de buscar'
             value={Search}
+            type='text'
+            name='search'
+            id='search'
             onChange={(event) => setSearch(event.target.value)}
             onKeyPress={(event) => {if (event.key === 'Enter') onSearchItems()}}
           />
-          <SearchButton src={serchIcon} onClick={onSearchItems}  />
+          <SearchButton src={serchIcon} alt='' onClick={onSearchItems}  />
         </SearchContainer>
       </SearchBoxContainer>
   );
