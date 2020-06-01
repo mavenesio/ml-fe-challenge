@@ -106,7 +106,7 @@ const ItemDetails = ({details}) => {
                         <DescriptionText>{details.description}</DescriptionText>
                     </ItemDetailsDescription>
                 </ItemDetailsContainer>
-                : <h1>Pagina no encontrada</h1>
+                : null
             }
         </div>
     )

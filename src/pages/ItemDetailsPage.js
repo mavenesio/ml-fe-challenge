@@ -5,11 +5,10 @@ import { useParams } from "react-router-dom";
 import ItemDetails from '../components/ItemDetails/ItemDetails';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
 
-const ItemDetailsContainerPage = styled.div`
+const PageContainer = styled.div`
   display:flex;
   flex-direction:column;
   justify-content:center;
-  background-color: #EEEEEE;
   padding:1rem;
   margin: 0px 10%;
 `;
@@ -29,10 +28,10 @@ const ItemDetailsPage = () => {
     useEffect( () =>  { const apiCall = async () => getItemDetails(id); apiCall() }, [getItemDetails, id])
     
     return (
-        <ItemDetailsContainerPage>
+        <PageContainer>
           <Breadcrumb categories={Categories} />
           <ItemDetails details={Item} />
-        </ItemDetailsContainerPage>
+        </PageContainer>
     )
 }
 
