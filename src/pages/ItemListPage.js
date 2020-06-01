@@ -26,7 +26,8 @@ const ItemListPage = ({ match, location }) => {
   const [Categories, setCategories] = useState(null);
 
   const getItems = useCallback( async (search) => {
-    const query = `http://localhost:4000/api/getItems?search=${search}`;
+    const query = `${process.env.REACT_APP_API_URL}getItems?search=${search}`;
+    console.log(query);
     const {items, categories} = await fetch(query).then(res => res.json());
     setResults(items);
     setCategories(categories);

@@ -20,7 +20,7 @@ const ItemDetailsPage = () => {
     const [Categories, setCategories] = useState(null);
 
     const getItemDetails = useCallback( async (itemId) => {
-      const query = `http://localhost:4000/api/getItemDetails?id=${itemId}`;
+      const query = `${process.env.REACT_APP_API_URL}getItemDetails?id=${itemId}`;
       const {item, categories} = await fetch(query).then(res => res.json());
       setItem(item);
       setCategories(categories);
