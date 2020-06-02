@@ -1,7 +1,19 @@
 # Mercado Libre frontend test (frontend)
 
-### Development
+## Installation
+Create the following files on the `project root`:
+
+- `.env` for development
+
+Please verify required environment variables at [.env.example](.env.example).
+
+Install npm packages:
+
+```bash
+npm install
 ```
+## Development
+```bash
 npm install
 npm start
 npm test
