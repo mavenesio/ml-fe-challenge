@@ -39,6 +39,9 @@ const SearchInput = styled.input`
   &:focus {
       outline: none;
   };
+  @media (max-width: 750px) {
+    font-size:14px;
+  }
 `;
 const SearchButton = styled.img`
   cursor:pointer;
@@ -50,6 +53,10 @@ const LogoImage = styled.img`
   align-self:center;
   cursor:pointer;
   margin-right:1rem;
+  @media (max-width: 750px) {
+    width:50px;
+    height:30px;
+  }
 `;
 const HiddenLabel = styled.span`
   border: 0;
