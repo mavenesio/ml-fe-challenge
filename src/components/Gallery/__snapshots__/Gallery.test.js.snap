@@ -5,12 +5,16 @@ exports[`Gallery should render with props 1`] = `
   pictures={
     Array [
       Object {
-        "id": "1",
-        "url": "www.google.com",
+        "id": "785544-MLA32445402658_102019",
+        "url": "http://mla-s1-p.mlstatic.com/785544-MLA32445402658_102019-O.jpg",
       },
       Object {
-        "id": "2",
-        "url": "www.google.com",
+        "id": "950814-MLA32445499592_102019",
+        "url": "http://mla-s1-p.mlstatic.com/950814-MLA32445499592_102019-O.jpg",
+      },
+      Object {
+        "id": "960453-MLA32445499593_102019",
+        "url": "http://mla-s1-p.mlstatic.com/960453-MLA32445499593_102019-O.jpg",
       },
     ]
   }

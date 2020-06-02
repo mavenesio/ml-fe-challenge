@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Breadcrumb should render with empty categories 1`] = `
+<Breadcrumb
+  categories={Array []}
+/>
+`;
+
 exports[`Breadcrumb should render with props 1`] = `
 <Breadcrumb
   categories={

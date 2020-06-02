@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result List should render with props 1`] = `
+<ResultList
+  data={
+    Array [
+      Object {
+        "condition": "new",
+        "free_shipping": true,
+        "id": "MLA835586176",
+        "picture": "http://mla-s1-p.mlstatic.com/785544-MLA32445402658_102019-I.jpg",
+        "price": Object {
+          "amount": 223995,
+          "currency": "$",
+          "decimals": 0,
+        },
+        "stateName": "Capital Federal",
+        "title": "iPhone 11 128 Gb Negro 4 Gb Ram",
+      },
+      Object {
+        "condition": "new",
+        "free_shipping": true,
+        "id": "MLA830184104",
+        "picture": "http://mla-s1-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg",
+        "price": Object {
+          "amount": 183999.99,
+          "currency": "$",
+          "decimals": 0,
+        },
+        "stateName": "Buenos Aires",
+        "title": "iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Result List should render without props 1`] = `
+<ResultList
+  data={null}
+/>
+`;
