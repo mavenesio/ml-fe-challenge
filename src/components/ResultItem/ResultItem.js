@@ -23,6 +23,10 @@ const ResultBody = styled.div`
   flex-direction:row;
   justify-content:space-between;
   width:100%;
+  @media (max-width: 667px) {
+    flex-direction:column;
+    justify-content:flex-start;
+  }
 `;
 const ResultFirstColumn = styled.div`
   display:flex;
@@ -31,13 +35,19 @@ const ResultFirstColumn = styled.div`
   margin-right:1rem;
 `;
 const ResultSecondColumn = styled.div`
-  margin-top: 3rem;
-  padding:1rem;
   font-family: Arial, Helvetica, sans-serif;
   display:flex;
   flex-direction:row;
   justify-content:flex-end;
+  padding-right:16px;
   text-align:end;
+  width:100%;
+  & > div {
+    align-self:center;
+  }
+  @media (max-width: 667px) {
+    justify-content:flex-start;
+  }
 `;
 const ResultPrice = styled.div`
   align-self:flex-start;
@@ -45,17 +55,30 @@ const ResultPrice = styled.div`
   margin: 1rem 0rem;
   font-family: Arial, Helvetica, sans-serif;
 `;
-const ResultTitle = styled.div`
+const ResultText = styled.div`
   align-self:flex-start;
   font-size:18px;
-    font-family: Arial, Helvetica, sans-serif;
+  @media (max-width: 667px) {
+    font-size:14px;
+  }
+  font-family: Arial, Helvetica, sans-serif;
+`;
+
+const ListImage = styled.img`
+  width:180px;
+  height:180px;
+  @media (max-width: 667px) {
+    flex-wrap: wrap;
+    width:100px;
+    height:100px;
+  }
 `;
 
 const ResultItem = ({id, thumbnail, currency, price, freeShipping, title, stateName}) =>  {
   return (
     <ResultContainer onClick={() => history.push(`/items/${id}`)}>
       <ResultImageContainer>
-        <img src={thumbnail} width='180px' height='180px' alt=''/>
+        <ListImage src={thumbnail} alt=''/>
       </ResultImageContainer>
       <ResultBody>
         <ResultFirstColumn>
@@ -66,12 +89,14 @@ const ResultItem = ({id, thumbnail, currency, price, freeShipping, title, stateN
             <img src={freeShippingIcon} width='20px' height='20px' alt=''/>
             }
           </ResultPrice>
-          <ResultTitle>
+          <ResultText>
             {title}
-          </ResultTitle>
+          </ResultText>
         </ResultFirstColumn>
         <ResultSecondColumn>
-          {stateName}
+          <ResultText>
+            {stateName}
+          </ResultText>
         </ResultSecondColumn>
       </ResultBody>
     </ResultContainer>

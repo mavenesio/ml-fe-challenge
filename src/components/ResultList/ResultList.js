@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 import styled from 'styled-components';
 import ResultItem from '../ResultItem/ResultItem';
 
-const ResultListContainer = styled.div`
+const ListContainer = styled.div`
   border-radius:8px;
   background-color:white;
 `;
@@ -27,13 +27,13 @@ const ResultList = ({data}) => {
   }, []);
 
   return (
-      <ResultListContainer>
+      <ListContainer>
         { 
         (data && data.length > 0) 
         ? renderResults(data)
         : null 
         }
-      </ResultListContainer>
+      </ListContainer>
   );
 }
 

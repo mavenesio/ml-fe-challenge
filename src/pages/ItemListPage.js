@@ -8,18 +8,11 @@ const PageContainer = Styled.div`
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
-  width:100%;
   height:90vh;
   background-color:#EEEEEE;
-`;
-const SearchResultsContainer= Styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  background-color:#EEEEEE;
-  padding:1rem;
   margin: 0px 10%;
 `;
+
 const ItemListPage = ({ match, location }) => {
   const search = location.search.replace('?search=','');
   const [Results, setResults] = useState(null);
@@ -38,10 +31,8 @@ const ItemListPage = ({ match, location }) => {
   
   return (
     <PageContainer>
-      <SearchResultsContainer>
         <Breadcrumb categories={Categories} />
         <ResultList data={Results} />
-      </SearchResultsContainer>
     </PageContainer>
   );
 }
