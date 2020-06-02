@@ -12,6 +12,9 @@ const GalleryFirstColumn = styled.div`
     flex-direction:column;
     justify-content:flex-start;
     overflow-y:scroll;
+    @media (max-width: 667px) {
+        width:100px;
+    }
 `;
 const GallerySecondColumn = styled.div`
     flex: 1;
@@ -21,6 +24,12 @@ const GallerySecondColumn = styled.div`
     justify-content:center;
     & > img{
         align-self:center;
+    }
+    @media (max-width: 667px) {
+        justify-content:center;
+        & > img{
+            align-self:flex-start;
+        }
     }
 `;
 const ThumbnailContainer = styled.div`
@@ -36,6 +45,21 @@ const ThumbnailContainer = styled.div`
     justify-content:center;
 `;
 
+const PrimaryGalleryImage = styled.img`
+    width:auto;
+    height:450px;
+    @media (max-width: 667px) {
+        height:250px;
+    }
+`;
+const SecondaryGalleryImage = styled.img`
+    height:auto;
+    width:50px;
+    @media (max-width: 667px) {
+        width:30px;
+    }
+`;
+
 const Breadcrumb = ({pictures}) => {
     const [SelectedPicture, setSelectedPicture] = useState(null);
     useEffect( () => {if(pictures && pictures.length > 1) setSelectedPicture(pictures[0].id)}, [pictures]) 
@@ -43,7 +67,7 @@ const Breadcrumb = ({pictures}) => {
     const renderThumbnailPictures = useCallback( (pictures) => {
         return pictures.map(picture => (
         <ThumbnailContainer key={picture.id} onClick={() => setSelectedPicture(picture.id)}>
-            <img width='50px' height='auto' alt='' src={picture.url}/>
+            <SecondaryGalleryImage alt='' src={picture.url}/>
         </ThumbnailContainer>))
     }, []);
     
@@ -53,7 +77,7 @@ const Breadcrumb = ({pictures}) => {
             {renderThumbnailPictures(pictures)}
         </GalleryFirstColumn>
         <GallerySecondColumn>
-            <img width='auto' height='450px' alt='' src={SelectedPicture ? pictures.find(pic => pic.id === SelectedPicture).url : ''}/>
+            <PrimaryGalleryImage alt='' src={SelectedPicture ? pictures.find(pic => pic.id === SelectedPicture).url : ''}/>
         </GallerySecondColumn>
     </GalleryContainer>
     )

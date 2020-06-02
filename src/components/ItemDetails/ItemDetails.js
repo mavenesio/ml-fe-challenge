@@ -12,8 +12,12 @@ const ItemDetailsContainer = styled.div`
 const ItemBox = styled.div`
     display:flex;
     flex-direction:row;
+    flex-wrap:nowrap;
     justify-content:space-between;
     margin-top:16px;
+    @media (max-width: 750px) {
+        flex-wrap:wrap;
+    }
 `;
 const ItemDetailsDescription = styled.div`
     display:flex;
@@ -26,6 +30,9 @@ const ItemDetailsDescription = styled.div`
 const ItemImageContainer = styled.div`
     width:1000px;
     height:500px;
+    @media (max-width: 667px) {
+        height:300px;
+    }
 `;
 const ItemDetailsColumn = styled.div`
     display:flex;
