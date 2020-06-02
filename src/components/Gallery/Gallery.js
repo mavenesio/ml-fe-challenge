@@ -46,10 +46,20 @@ const ThumbnailContainer = styled.div`
 `;
 
 const PrimaryGalleryImage = styled.img`
-    width:auto;
+    object-fit: contain;
+    width:450px;
     height:450px;
-    @media (max-width: 667px) {
+    @media (max-width: 1050px) {
+        width:350px;
+        height:350px;
+    }
+    @media (max-width: 900px) {
+        width:250px;
         height:250px;
+    }
+    @media (max-width: 500px) {
+        width:150px;
+        height:150px;
     }
 `;
 const SecondaryGalleryImage = styled.img`
@@ -60,7 +70,7 @@ const SecondaryGalleryImage = styled.img`
     }
 `;
 
-const Breadcrumb = ({pictures}) => {
+const Gallery = ({pictures}) => {
     const [SelectedPicture, setSelectedPicture] = useState(null);
     useEffect( () => {if(pictures && pictures.length > 1) setSelectedPicture(pictures[0].id)}, [pictures]) 
 
@@ -83,4 +93,4 @@ const Breadcrumb = ({pictures}) => {
     )
 };
 
-export default Breadcrumb;
+export default Gallery;
