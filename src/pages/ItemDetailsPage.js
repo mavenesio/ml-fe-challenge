@@ -1,17 +1,9 @@
 import React, {useState, useCallback, useEffect} from 'react';
-import styled from 'styled-components';
 import fetch from "cross-fetch";
 import { useParams } from "react-router-dom";
 import ItemDetails from '../components/ItemDetails/ItemDetails';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
-
-const PageContainer = styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:1rem;
-  margin: 0px 10%;
-`;
+import {PageContainer} from '../components/Layout/PageLayout/PageLayout';
 
 const ItemDetailsPage = () => {
     let { id } = useParams();

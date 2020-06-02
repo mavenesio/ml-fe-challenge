@@ -1,17 +1,8 @@
 import React, {useState, useCallback, useEffect} from 'react';
-import Styled from 'styled-components';
 import fetch from "cross-fetch";
 import ResultList from '../components/ResultList/ResultList';
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb';
-
-const PageContainer = Styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  height:90vh;
-  background-color:#EEEEEE;
-  margin: 0px 10%;
-`;
+import {PageContainer} from '../components/Layout/PageLayout/PageLayout';
 
 const ItemListPage = ({ match, location }) => {
   const search = location.search.replace('?search=','');

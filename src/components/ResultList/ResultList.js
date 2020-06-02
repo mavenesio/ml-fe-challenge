@@ -1,11 +1,6 @@
 import React, {useCallback} from 'react';
-import styled from 'styled-components';
+import {ListContainer} from '../Layout/PageLayout/PageLayout';
 import ResultItem from '../ResultItem/ResultItem';
-
-const ListContainer = styled.div`
-  border-radius:8px;
-  background-color:white;
-`;
 
 const ResultList = ({data}) => {
   const renderResults = useCallback( (results) => {
