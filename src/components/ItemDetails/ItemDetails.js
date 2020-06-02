@@ -44,6 +44,9 @@ const ItemSubTitle = styled.div`
     align-self:flex-start;
     margin-top:32px;
     font-size:14px;
+    @media (max-width: 1050px) {
+        font-size:10px;
+    }
     font-family: Arial, Helvetica, sans-serif;
 
 `;
@@ -51,6 +54,9 @@ const ItemTitle = styled.div`
     align-self:flex-start;
     margin-top:16px;
     font-size:24px;
+    @media (max-width: 1050px) {
+        font-size:18px;
+    }
     font-family: Arial, Helvetica, sans-serif;
 
 `;
@@ -59,6 +65,10 @@ const ItemPrice = styled.div`
     margin-top:32px;
     font-size:46px;
     font-family: Arial, Helvetica, sans-serif;
+    @media (max-width: 1050px) {
+        font-size:30px;
+    }
+
 `;
 const DescriptionTitle = styled.div`
     margin: 0px 0px 32px 32px;
