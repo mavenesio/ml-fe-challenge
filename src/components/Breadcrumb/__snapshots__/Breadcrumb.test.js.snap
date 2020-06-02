@@ -12,16 +12,3 @@ exports[`Breadcrumb should render with props 1`] = `
 `;
 
 exports[`Breadcrumb should render without props 1`] = `<Breadcrumb />`;
-
-exports[`Title should render with props 1`] = `
-<Breadcrumb
-  categories={
-    Array [
-      "cat 1",
-      "cat 2",
-    ]
-  }
-/>
-`;
-
-exports[`Title should render without props 1`] = `<Breadcrumb />`;
